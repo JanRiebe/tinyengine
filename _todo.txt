@@ -1,0 +1,3 @@
+
+How to compile?
+cc ../src/main.c ../src/renderer.c ../src/Utils.c -o tinyEngine -lglut -lGLU -lGL -lGLEW -lm
