@@ -11,5 +11,6 @@ void DestroyCube(void);
 void DrawCube(void);
 void CleanUpRenderer(void);
 void setPerFrameCallback(void (*perFrameCallback)(float));
+void rotateCube(float);
 
 #endif

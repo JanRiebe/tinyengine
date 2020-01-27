@@ -62,7 +62,10 @@ void UpdateFixed(int Value)
 void Update(float deltaTime)
 {
     //printf("%f\n", deltaTime);
+
+    rotateCube(45.0f * ((float)(deltaTime)));
 }
+
 
 
 void KeyPressed(unsigned char key, int x, int y)

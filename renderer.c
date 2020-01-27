@@ -256,16 +256,16 @@ void DestroyCube(void)
 }
 
 
+void rotateCube(float rotation)
+{
+    CubeRotation += rotation;
+    printf("%f\n", CubeRotation);
+}
+
+
 void DrawCube(void)
 {
-    float CubeAngle;
-    clock_t Now = clock();
-    if (LastTime == 0)
-      LastTime = Now;
-
-    CubeRotation += 45.0f * ((float)(Now - LastTime) / CLOCKS_PER_SEC);
-    CubeAngle = DegreesToRadians(CubeRotation);
-    LastTime = Now;
+    float CubeAngle = DegreesToRadians(CubeRotation);
 
     ModelMatrix = IDENTITY_MATRIX;
     RotateAboutY(&ModelMatrix, CubeAngle);

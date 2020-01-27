@@ -5,4 +5,19 @@ cc ../src/main.c ../src/renderer.c ../src/Utils.c -o tinyEngine -lglut -lGLU -lG
 
 
 TODO:
-Add repo to github.
+* Find good way to represent game objects and operations (first transformations) that can be performed on them.
+* Add repo to github.
+
+
+
+Thoughts about structure:
+
+    Game objects
+        Mesh data
+        transform data
+        impulse data
+        parent/children relationships
+    Objects are a collection of data. These data types appear only once.
+    They could be represented as structs of pointers to structs of data.
+    If an object doesn't have the data, the pointer is a null pointer.
+    Game objects don't define operations that happen on them but only state.
