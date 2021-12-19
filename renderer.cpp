@@ -1,5 +1,7 @@
 #include "renderer.h"
 #include "Utils.h"
+#include "mesh.h"
+#include "gamenode.h"
 
 #define WINDOW_TITLE_PREFIX "tinyEngine"
 
@@ -77,8 +79,6 @@ void InitializeRenderer(int argc, char* argv[])
     ProjectionMatrix = IDENTITY_MATRIX;
     ViewMatrix = IDENTITY_MATRIX;
     TranslateMatrix(&ViewMatrix, 0, 0, -2);
-
-    CreateCube();
 }
 
 void InitWindow(int argc, char* argv[])
@@ -111,9 +111,11 @@ void InitWindow(int argc, char* argv[])
     glutReshapeFunc(ResizeFunction);
     glutDisplayFunc(RenderFunction);
     glutIdleFunc(IdleFunction);
-    void CreateCube(void);
-    void DestroyCube(void);
-    void DrawCube(void);
+    /*
+    void InitMesh(void);
+    void DestroyMesh(void);
+    void DrawMesh(void);
+    */
 }
 
 void ResizeFunction(int Width, int Height)
@@ -152,7 +154,7 @@ void RenderFunction(void)
 
   glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-  DrawCube();
+  DrawMesh(new Transform({0,0,0},{0,0,0},{0,0,0}));
 
   glutSwapBuffers();
   glutPostRedisplay();
@@ -171,29 +173,8 @@ void IdleFunction(void)
 
 
 
-void CreateCube(void)
+void InitMesh(Mesh* mesh)
 {
-    const Vertex VERTICES[8] =
-    {
-      { { -.5f, -.5f,  .5f, 1 }, { 0, 0, 1, 1 } },
-      { { -.5f,  .5f,  .5f, 1 }, { 1, 0, 0, 1 } },
-      { {  .5f,  .5f,  .5f, 1 }, { 0, 1, 0, 1 } },
-      { {  .5f, -.5f,  .5f, 1 }, { 1, 1, 0, 1 } },
-      { { -.5f, -.5f, -.5f, 1 }, { 1, 1, 1, 1 } },
-      { { -.5f,  .5f, -.5f, 1 }, { 1, 0, 0, 1 } },
-      { {  .5f,  .5f, -.5f, 1 }, { 1, 0, 1, 1 } },
-      { {  .5f, -.5f, -.5f, 1 }, { 0, 0, 1, 1 } }
-    };
-
-    const GLuint INDICES[36] =
-    {
-      0,2,1,  0,3,2,
-      4,3,0,  4,7,3,
-      4,1,5,  4,0,1,
-      3,6,2,  3,7,6,
-      1,6,5,  1,2,6,
-      7,5,6,  7,4,5
-    };
 
     ShaderIds[0] = glCreateProgram();
     ExitOnGLError("ERROR: Could not create the shader program");
@@ -225,23 +206,25 @@ void CreateCube(void)
     ExitOnGLError("ERROR: Could not enable vertex attributes");
 
     glBindBuffer(GL_ARRAY_BUFFER, BufferIds[1]);
-    glBufferData(GL_ARRAY_BUFFER, sizeof(VERTICES), VERTICES, GL_STATIC_DRAW);
+    glBufferData(GL_ARRAY_BUFFER, sizeof(Vertex)*mesh->VERTEX_COUNT, mesh->VERTICES, GL_STATIC_DRAW);
     ExitOnGLError("ERROR: Could not bind the VBO to the VAO");
 
-    glVertexAttribPointer(0, 4, GL_FLOAT, GL_FALSE, sizeof(VERTICES[0]), (GLvoid*)0);
-    glVertexAttribPointer(1, 4, GL_FLOAT, GL_FALSE, sizeof(VERTICES[0]), (GLvoid*)sizeof(VERTICES[0].Position));
+    glVertexAttribPointer(0, 4, GL_FLOAT, GL_FALSE, sizeof(Vertex), (GLvoid*)0);
+    glVertexAttribPointer(1, 4, GL_FLOAT, GL_FALSE, sizeof(Vertex), (GLvoid*)sizeof(Vector4));
     ExitOnGLError("ERROR: Could not set VAO attributes");
 
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, BufferIds[2]);
-    glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(INDICES), INDICES, GL_STATIC_DRAW);
+    glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(mesh->INDICES[0])*mesh->INDEX_COUNT, mesh->INDICES, GL_STATIC_DRAW);
     ExitOnGLError("ERROR: Could not bind the IBO to the VAO");
 
     glBindVertexArray(0);
 }
 
 
-
-void DestroyCube(void)
+//TODO this destroys the mesh on the graphics card but not the mesh object that was used to create it.
+// How do I want to handle the creating and destruction of these? Perhaps in the mesh module, meshes should be managed.
+// The renderer only uses them, reading data from them.
+void DestroyMesh(void)
 {
   glDetachShader(ShaderIds[0], ShaderIds[1]);
   glDetachShader(ShaderIds[0], ShaderIds[2]);
@@ -259,17 +242,13 @@ void DestroyCube(void)
 void rotateCube(float rotation)
 {
     CubeRotation += rotation;
-    printf("%f\n", CubeRotation);
+    //printf("%f\n", CubeRotation);
 }
 
 
-void DrawCube(void)
+void DrawMesh(Transform* transform)
 {
-    float CubeAngle = DegreesToRadians(CubeRotation);
-
-    ModelMatrix = IDENTITY_MATRIX;
-    RotateAboutY(&ModelMatrix, CubeAngle);
-    RotateAboutX(&ModelMatrix, CubeAngle);
+    ModelMatrix = transform->toMatrix();
 
     glUseProgram(ShaderIds[0]);
     ExitOnGLError("ERROR: Could not use the shader program");
@@ -285,7 +264,7 @@ void DrawCube(void)
     ExitOnGLError("ERROR: Could not bind the VAO for drawing purposes");
 
     glDrawElements(GL_TRIANGLES, 36, GL_UNSIGNED_INT, (GLvoid*)0);
-    ExitOnGLError("ERROR: Could not draw the cube");
+    ExitOnGLError("ERROR: Could not draw the mesh");
 
     glBindVertexArray(0);
     glUseProgram(0);
@@ -295,5 +274,5 @@ void DrawCube(void)
 
 void CleanUpRenderer()
 {
-    DestroyCube();
+    DestroyMesh();
 }

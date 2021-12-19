@@ -1,13 +1,26 @@
 
 How to compile?
-cc ../src/main.c ../src/renderer.c ../src/Utils.c -o tinyEngine -lglut -lGLU -lGL -lGLEW -lm
+g++ ../src/main.cpp ../src/renderer.cpp ../src/transform.cpp ../src/Utils.cpp ../src/gamenode.cpp ../src/mesh.cpp -o ../build/tinyEngine -lglut -lGLU -lGL -lGLEW -lm
 
 
 
 TODO:
-* Find good way to represent game objects and operations (first transformations) that can be performed on them.
 * Add repo to github.
 
+* Associate buffer IDs with meshes.
+    Currently I have meshes in ram.
+    The renderer puts these to the graphics card with InitMesh.
+    From now on it should look up what is on the graphics card when told to render a mesh.
+        It could look up the pointer of the mesh or gamenode passed in.
+    The renderer needs to be told what transformations the mesh should be rendered in.
+        But the renderfunction can't take parameters.
+        So I need to store the data somewhere to be picked up for rendering.
+        The renderer could have a data structure that associates gamenode pointers with transformations and vertexbuffers.
+        The engine is then free to inform the renderer to update this.
+            Adding meshes, removing meshes, transforming meshes.
+        The renderers representation is thus seperate from the engines representation of the meshes.
+            It begs the question whether the engine needs to hold the meshes in memory at all or could just discard them after pushing them to the graphics card.
+                This depends on whether the GC can hold all the meshes needed.
 
 
 Thoughts about structure:
@@ -21,3 +34,4 @@ Thoughts about structure:
     They could be represented as structs of pointers to structs of data.
     If an object doesn't have the data, the pointer is a null pointer.
     Game objects don't define operations that happen on them but only state.
+    All types of data are managed by their own module.

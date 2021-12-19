@@ -10,11 +10,22 @@
 
 static const double PI = 3.14159265358979323846;
 
-typedef struct Vertex
+
+
+typedef struct Vector3
 {
-  float Position[4];
-  float Color[4];
-} Vertex;
+  float x;
+  float y;
+  float z;
+} Vector3;
+
+typedef struct Vector4
+{
+  float x;
+  float y;
+  float z;
+  float w;
+} Vector4;
 
 typedef struct Matrix
 {
