@@ -2,6 +2,9 @@
 #include "renderer.h"
 #include "gamenode.h"
 #include "transform.h"
+#include "modules.h"
+
+#include <iostream>
 
 
 void InitializeEngine(void);
@@ -14,19 +17,23 @@ void RequestToCloseEngine();
 void KeySpecial(int key, int x, int y);
 void OnGameStart();
 
-const unsigned int GAME_NODE_COUNT = 2;
-GameNode gameNodes[GAME_NODE_COUNT];
-
+GameNode* rootNode;
+TinyEngineRenderer* renderer;
 
 int FIXED_UPDATE_TIMESTEP = 1000;
 
 
 int main(int argc, char* argv[])
 {
-    InitializeRenderer(argc, argv);
-    InitializeEngine();
+  renderer = new RENDERER();
+  std::cout<<"Renderer created"<<std::endl;
+  renderer->InitializeRenderer(argc, argv);
+  std::cout<<"Renderer initialized"<<std::endl;
+  InitializeEngine();
+  std::cout<<"Engine initialized"<<std::endl;
 
   OnGameStart();
+  std::cout<<"Game start"<<std::endl;
   glutMainLoop();
 
   printf("%s\n", "This is happening after we close the window. Thanks to the call to glutSetOption.");
@@ -40,9 +47,10 @@ int main(int argc, char* argv[])
 
 void InitializeEngine()
 {
+  //TODO should these become part of the renderer or part of different modules, like input
     glutTimerFunc(0, UpdateFixed, 0);
     glutCloseFunc(CleanUp);
-    setPerFrameCallback(Update);
+    renderer->setPerFrameCallback(Update);
     glutKeyboardFunc(KeyPressed);
 	  glutKeyboardUpFunc(KeyUp);
     glutSpecialFunc(KeySpecial);
@@ -52,43 +60,20 @@ void InitializeEngine()
 void OnGameStart()
 {
 
+    RenderComponent* rc = new RENDER_COMPONENT();
 
-        Vertex vertices[8] =
-        {
-          { { -.5f, -.5f,  .5f, 1 }, { 0, 0, 1, 1 } },
-          { { -.5f,  .5f,  .5f, 1 }, { 1, 0, 0, 1 } },
-          { {  .5f,  .5f,  .5f, 1 }, { 0, 1, 0, 1 } },
-          { {  .5f, -.5f,  .5f, 1 }, { 1, 1, 0, 1 } },
-          { { -.5f, -.5f, -.5f, 1 }, { 1, 1, 1, 1 } },
-          { { -.5f,  .5f, -.5f, 1 }, { 1, 0, 0, 1 } },
-          { {  .5f,  .5f, -.5f, 1 }, { 1, 0, 1, 1 } },
-          { {  .5f, -.5f, -.5f, 1 }, { 0, 0, 1, 1 } }
-        };
-
-        GLuint indices[36] =
-        {
-          0,2,1,  0,3,2,
-          4,3,0,  4,7,3,
-          4,1,5,  4,0,1,
-          3,6,2,  3,7,6,
-          1,6,5,  1,2,6,
-          7,5,6,  7,4,5
-        };
-
-    Mesh* mesh = new Mesh(8, 36, vertices, indices);
-
-    gameNodes[0] = GameNode();
-    gameNodes[0].mesh = mesh;
+    rootNode = GameNode::createRoot();
     Transform* transform = new Transform({0,0,0},{0,0,0},{1,1,1});
-    gameNodes[0].transform = transform;
+    rootNode->transform = transform;
+    rootNode->renderComponent = rc;
+    std::cout<<"transform "<<rootNode->transform<<std::endl;
 
-
-    gameNodes[1] = GameNode();
-    gameNodes[1].mesh = mesh;
+    GameNode* newNode = new GameNode(rootNode);
     transform = new Transform({2,0,0},{0,0,0},{1,1,1});
-    gameNodes[1].transform = transform;
+    newNode->transform = transform;
+    newNode->renderComponent = rc;
 
-    InitMesh(mesh);
+    renderer->LoadMeshes(rootNode);
 }
 
 
@@ -113,7 +98,7 @@ void Update(float deltaTime)
 {
     //printf("%f\n", deltaTime);
 
-    rotateCube(45.0f * ((float)(deltaTime)));
+  rootNode->transform->rotate(Vector3({deltaTime,deltaTime,deltaTime}));
 }
 
 
@@ -153,10 +138,12 @@ void KeySpecial(int key, int x, int y)
 
     case GLUT_KEY_LEFT :
 		printf("Left\n");
+    rootNode->children.back()->transform->position.x-=0.1;
 		break;
 
     case GLUT_KEY_RIGHT :
 		printf("Right\n");
+    rootNode->children.back()->transform->position.x+=0.1;
 		break;
     }
 }
@@ -171,5 +158,7 @@ void RequestToCloseEngine()
 
 void CleanUp()
 {
-    CleanUpRenderer();
+    renderer->CleanUpRenderer();
+    delete renderer;
+    delete rootNode;
 }

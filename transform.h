@@ -11,5 +11,6 @@ class Transform
 
         Transform(Vector3 p, Vector3 r, Vector3 s);
         Matrix toMatrix();
+        void rotate(Vector3 amount);
 
 };

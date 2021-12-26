@@ -17,3 +17,10 @@ Matrix Transform::toMatrix()
     TranslateMatrix(&m, position.x, position.y, position.z);
     return m;
 }
+
+void Transform::rotate(Vector3 amount)
+{
+    rotation.x+=amount.x;
+    rotation.y+=amount.y;
+    rotation.z+=amount.z;
+}

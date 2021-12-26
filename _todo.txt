@@ -1,37 +1,76 @@
 
 How to compile?
-g++ ../src/main.cpp ../src/renderer.cpp ../src/transform.cpp ../src/Utils.cpp ../src/gamenode.cpp ../src/mesh.cpp -o ../build/tinyEngine -lglut -lGLU -lGL -lGLEW -lm
+g++ ../src/main.cpp ../src/renderer.cpp ../src/transform.cpp ../src/Utils.cpp ../src/gamenode.cpp ../src/teogl/mesh.cpp ../src/teogl/openGLrenderer.cpp -o ../build/tinyEngine -lglut -lGLU -lGL -lGLEW -lm
 
 
 
 TODO:
+
+* Let Mesh be owned by the renderer, but give it a base class in the engine.
+
+* Think about giving render component only a mesh ID and store meshes seperately
+    * though isn't opengl basically doing that under the hood?
+
+* Think about whether there should be an engine side representation of meshes with vertecies already
+    * loading might be independent of rendering
+
+* handle shaders well
+
+* Let the renderer interact well with the game tree
+    * Game nodes should have three states relevant to the renderer:
+        * inactive: not loaded to the graphics card
+        * hidden: loaded to the graphics card but not drawn
+        * active: drawn
+
+* the renderer should also manage the window
+
+* there should be a module for input, in this case using glut
+
 * Add repo to github.
 
-* Associate buffer IDs with meshes.
-    Currently I have meshes in ram.
-    The renderer puts these to the graphics card with InitMesh.
-    From now on it should look up what is on the graphics card when told to render a mesh.
-        It could look up the pointer of the mesh or gamenode passed in.
-    The renderer needs to be told what transformations the mesh should be rendered in.
-        But the renderfunction can't take parameters.
-        So I need to store the data somewhere to be picked up for rendering.
-        The renderer could have a data structure that associates gamenode pointers with transformations and vertexbuffers.
-        The engine is then free to inform the renderer to update this.
-            Adding meshes, removing meshes, transforming meshes.
-        The renderers representation is thus seperate from the engines representation of the meshes.
-            It begs the question whether the engine needs to hold the meshes in memory at all or could just discard them after pushing them to the graphics card.
-                This depends on whether the GC can hold all the meshes needed.
+* game script objects
+
+* sound
+
+* UI
+
+* skinned meshes
+
+* animation trees
+
+* AI
+    * navmesh
+    * behavior tree
+    * utility
 
 
 Thoughts about structure:
 
     Game objects
-        Mesh data
-        transform data
-        impulse data
+        status
+        Mesh data (if null no rendering, else rendering)
+        transform data (if null transform ignored)
         parent/children relationships
+        game script instances (list of script objects, script objects listen to events)
+        when destroyed, all children get destroyed
+    Events
+        trigger things in game script instances
+        transport information between game script instances
+        (should these be on another thread then rendering and for example physics?)
+        are broadcasted down the tree, up the tree, to siblings or all nodes
+            how do I actually need to pass info?
+        scripts register to listen to them
+            an example is input, an input event is passed and in a script there is a on horizontal axis method listening
+            another example is update, scripts that need it can register and then do something with it
+            also a trigger event caused by a collider passed to the parent which manages what happens on collision
+            or a custom event raised by a script to inform another script that it has taken damage
+    Properties (somewhat alternative to the tree structure)
+        data fields
+        (should transform be a property?)
+        special events act on all properties that belong to a group
+        this is so that the group can be represented in an array and processed fast
+        example where this is needed?
     Objects are a collection of data. These data types appear only once.
     They could be represented as structs of pointers to structs of data.
     If an object doesn't have the data, the pointer is a null pointer.
-    Game objects don't define operations that happen on them but only state.
     All types of data are managed by their own module.
