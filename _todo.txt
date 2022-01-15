@@ -6,7 +6,16 @@ g++ ../src/main.cpp ../src/renderer.cpp ../src/transform.cpp ../src/Utils.cpp ..
 
 TODO:
 
+* Add repo to github.
+    * can do it privately first
+    * should do it for safety
+
 * Let Mesh be owned by the renderer, but give it a base class in the engine.
+
+* See what part of mesh transformation should perhaps even be done in the renderer.
+    * Pass start and end of movements to renderer and don't calculate intermediate steps in update.
+        * Must be interruptable.
+        * Does it even make sense, since I also need colliders.
 
 * Think about giving render component only a mesh ID and store meshes seperately
     * though isn't opengl basically doing that under the hood?
@@ -26,9 +35,9 @@ TODO:
 
 * there should be a module for input, in this case using glut
 
-* Add repo to github.
-
 * game script objects
+
+* collision/triggers
 
 * sound
 
@@ -42,6 +51,8 @@ TODO:
     * navmesh
     * behavior tree
     * utility
+
+* physics
 
 
 Thoughts about structure:
