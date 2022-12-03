@@ -1,0 +1,10 @@
+/home/jan/code_projects/tinyengine/src/render_reference/CMakeFiles/hdr.dir
+/home/jan/code_projects/tinyengine/src/render_reference/CMakeFiles/rebuild_cache.dir
+/home/jan/code_projects/tinyengine/src/render_reference/CMakeFiles/displacement.dir
+/home/jan/code_projects/tinyengine/src/render_reference/CMakeFiles/edit_cache.dir
+/home/jan/code_projects/tinyengine/src/render_reference/CMakeFiles/bump.dir
+/home/jan/code_projects/tinyengine/src/render_reference/CMakeFiles/npr.dir
+/home/jan/code_projects/tinyengine/src/render_reference/CMakeFiles/shadow.dir
+/home/jan/code_projects/tinyengine/src/render_reference/CMakeFiles/phong.dir
+/home/jan/code_projects/tinyengine/src/render_reference/CMakeFiles/combined.dir
+/home/jan/code_projects/tinyengine/src/render_reference/CMakeFiles/simple.dir

@@ -1,14 +1,24 @@
 
 How to compile?
+adapt cmakelists in render folder
+
+
+old
 g++ ../src/main.cpp ../src/renderer.cpp ../src/transform.cpp ../src/Utils.cpp ../src/gamenode.cpp ../src/teogl/mesh.cpp ../src/teogl/openGLrenderer.cpp -o ../build/tinyEngine -lglut -lGLU -lGL -lGLEW -lm
 
 
 
 TODO:
+* Integrate code from lecture (in render folder)
+	* make loading of meshes separate
+	* create shaders separately
+		* object shader
+		* effect shader
+	* keep the camera class as it is right now
+	
+	
+	
 
-* Add repo to github.
-    * can do it privately first
-    * should do it for safety
 
 * Let Mesh be owned by the renderer, but give it a base class in the engine.
 

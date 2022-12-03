@@ -1,0 +1,64 @@
+#version 420 core
+
+layout(triangles, equal_spacing, cw) in;
+
+uniform sampler2D TexDisplacement;
+
+in VertexData
+{
+	vec3 Tangent1;
+	vec3 Tangent2;
+	vec3 Normal;
+	vec2 TexCoords;
+} inData[];
+
+out VertexData
+{
+	vec3 Tangent1;
+	vec3 Tangent2;
+	vec3 Normal;
+	vec2 TexCoords;
+} outData;
+
+uniform float FocalLength;
+uniform float MinDepth;
+uniform float MaxDepth;
+
+vec4 perspectiveTransform(vec4 viewPosition)
+{
+	viewPosition.w = viewPosition.y; // Have the depth in w
+	viewPosition.y = viewPosition.z; // Have the up-component in y
+	// Have the distance scaled to (0..maxDepth) in z (homogenous division scales down to 0..1)
+	viewPosition.z = (viewPosition.w - MinDepth) * MaxDepth / (MaxDepth - MinDepth);
+	viewPosition.x *= FocalLength; // Incease magification with high image plane distance
+	viewPosition.y *= FocalLength; // Incease magification with high image plane distance
+	return viewPosition;
+}
+
+void main(void)
+{
+	gl_Position = gl_in[0].gl_Position * gl_TessCoord[0];
+	gl_Position += gl_in[1].gl_Position * gl_TessCoord[1];
+	gl_Position += gl_in[2].gl_Position * gl_TessCoord[2];
+	
+	outData.Tangent1 = inData[0].Tangent1 * gl_TessCoord[0];
+	outData.Tangent1 += inData[1].Tangent1 * gl_TessCoord[1];
+	outData.Tangent1 += inData[2].Tangent1 * gl_TessCoord[2];
+	
+	outData.Tangent2 = inData[0].Tangent2 * gl_TessCoord[0];
+	outData.Tangent2 += inData[1].Tangent2 * gl_TessCoord[1];
+	outData.Tangent2 += inData[2].Tangent2 * gl_TessCoord[2];
+	
+	outData.Normal = inData[0].Normal * gl_TessCoord[0];
+	outData.Normal += inData[1].Normal * gl_TessCoord[1];
+	outData.Normal += inData[2].Normal * gl_TessCoord[2];
+	
+	outData.TexCoords = inData[0].TexCoords * gl_TessCoord[0];
+	outData.TexCoords += inData[1].TexCoords * gl_TessCoord[1];
+	outData.TexCoords += inData[2].TexCoords * gl_TessCoord[2];
+	
+	float displacementSample = texture(TexDisplacement, outData.TexCoords).x;
+	gl_Position.xyz += outData.Normal * displacementSample * 0.02;
+	
+	gl_Position = perspectiveTransform(gl_Position);
+}

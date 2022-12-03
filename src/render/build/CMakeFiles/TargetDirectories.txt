@@ -1,0 +1,3 @@
+/home/jan/code_projects/tinyengine/src/render/build/CMakeFiles/rebuild_cache.dir
+/home/jan/code_projects/tinyengine/src/render/build/CMakeFiles/edit_cache.dir
+/home/jan/code_projects/tinyengine/src/render/build/CMakeFiles/combined.dir

@@ -1,0 +1,362 @@
+[
+{
+  "directory": "/home/jan/code_projects/tinyengine/src/render_reference",
+  "command": "/usr/bin/c++    -O3 -DNDEBUG   -o CMakeFiles/hdr.dir/src/Hdr.cpp.o -c /home/jan/code_projects/tinyengine/src/render_reference/src/Hdr.cpp",
+  "file": "/home/jan/code_projects/tinyengine/src/render_reference/src/Hdr.cpp"
+},
+{
+  "directory": "/home/jan/code_projects/tinyengine/src/render_reference",
+  "command": "/usr/bin/c++    -O3 -DNDEBUG   -o CMakeFiles/hdr.dir/src/Camera.cpp.o -c /home/jan/code_projects/tinyengine/src/render_reference/src/Camera.cpp",
+  "file": "/home/jan/code_projects/tinyengine/src/render_reference/src/Camera.cpp"
+},
+{
+  "directory": "/home/jan/code_projects/tinyengine/src/render_reference",
+  "command": "/usr/bin/c++    -O3 -DNDEBUG   -o CMakeFiles/hdr.dir/src/DirectionalLight.cpp.o -c /home/jan/code_projects/tinyengine/src/render_reference/src/DirectionalLight.cpp",
+  "file": "/home/jan/code_projects/tinyengine/src/render_reference/src/DirectionalLight.cpp"
+},
+{
+  "directory": "/home/jan/code_projects/tinyengine/src/render_reference",
+  "command": "/usr/bin/c++    -O3 -DNDEBUG   -o CMakeFiles/hdr.dir/src/eventhandling.cpp.o -c /home/jan/code_projects/tinyengine/src/render_reference/src/eventhandling.cpp",
+  "file": "/home/jan/code_projects/tinyengine/src/render_reference/src/eventhandling.cpp"
+},
+{
+  "directory": "/home/jan/code_projects/tinyengine/src/render_reference",
+  "command": "/usr/bin/c++    -O3 -DNDEBUG   -o CMakeFiles/hdr.dir/src/fileio.cpp.o -c /home/jan/code_projects/tinyengine/src/render_reference/src/fileio.cpp",
+  "file": "/home/jan/code_projects/tinyengine/src/render_reference/src/fileio.cpp"
+},
+{
+  "directory": "/home/jan/code_projects/tinyengine/src/render_reference",
+  "command": "/usr/bin/c++    -O3 -DNDEBUG   -o CMakeFiles/hdr.dir/src/gltools.cpp.o -c /home/jan/code_projects/tinyengine/src/render_reference/src/gltools.cpp",
+  "file": "/home/jan/code_projects/tinyengine/src/render_reference/src/gltools.cpp"
+},
+{
+  "directory": "/home/jan/code_projects/tinyengine/src/render_reference",
+  "command": "/usr/bin/c++    -O3 -DNDEBUG   -o CMakeFiles/hdr.dir/src/ImagePlaneMesh.cpp.o -c /home/jan/code_projects/tinyengine/src/render_reference/src/ImagePlaneMesh.cpp",
+  "file": "/home/jan/code_projects/tinyengine/src/render_reference/src/ImagePlaneMesh.cpp"
+},
+{
+  "directory": "/home/jan/code_projects/tinyengine/src/render_reference",
+  "command": "/usr/bin/c++    -O3 -DNDEBUG   -o CMakeFiles/hdr.dir/src/Matrix4x4.cpp.o -c /home/jan/code_projects/tinyengine/src/render_reference/src/Matrix4x4.cpp",
+  "file": "/home/jan/code_projects/tinyengine/src/render_reference/src/Matrix4x4.cpp"
+},
+{
+  "directory": "/home/jan/code_projects/tinyengine/src/render_reference",
+  "command": "/usr/bin/c++    -O3 -DNDEBUG   -o CMakeFiles/hdr.dir/src/Mesh.cpp.o -c /home/jan/code_projects/tinyengine/src/render_reference/src/Mesh.cpp",
+  "file": "/home/jan/code_projects/tinyengine/src/render_reference/src/Mesh.cpp"
+},
+{
+  "directory": "/home/jan/code_projects/tinyengine/src/render_reference",
+  "command": "/usr/bin/c++    -O3 -DNDEBUG   -o CMakeFiles/displacement.dir/src/DisplacementMapping.cpp.o -c /home/jan/code_projects/tinyengine/src/render_reference/src/DisplacementMapping.cpp",
+  "file": "/home/jan/code_projects/tinyengine/src/render_reference/src/DisplacementMapping.cpp"
+},
+{
+  "directory": "/home/jan/code_projects/tinyengine/src/render_reference",
+  "command": "/usr/bin/c++    -O3 -DNDEBUG   -o CMakeFiles/displacement.dir/src/Camera.cpp.o -c /home/jan/code_projects/tinyengine/src/render_reference/src/Camera.cpp",
+  "file": "/home/jan/code_projects/tinyengine/src/render_reference/src/Camera.cpp"
+},
+{
+  "directory": "/home/jan/code_projects/tinyengine/src/render_reference",
+  "command": "/usr/bin/c++    -O3 -DNDEBUG   -o CMakeFiles/displacement.dir/src/DirectionalLight.cpp.o -c /home/jan/code_projects/tinyengine/src/render_reference/src/DirectionalLight.cpp",
+  "file": "/home/jan/code_projects/tinyengine/src/render_reference/src/DirectionalLight.cpp"
+},
+{
+  "directory": "/home/jan/code_projects/tinyengine/src/render_reference",
+  "command": "/usr/bin/c++    -O3 -DNDEBUG   -o CMakeFiles/displacement.dir/src/eventhandling.cpp.o -c /home/jan/code_projects/tinyengine/src/render_reference/src/eventhandling.cpp",
+  "file": "/home/jan/code_projects/tinyengine/src/render_reference/src/eventhandling.cpp"
+},
+{
+  "directory": "/home/jan/code_projects/tinyengine/src/render_reference",
+  "command": "/usr/bin/c++    -O3 -DNDEBUG   -o CMakeFiles/displacement.dir/src/fileio.cpp.o -c /home/jan/code_projects/tinyengine/src/render_reference/src/fileio.cpp",
+  "file": "/home/jan/code_projects/tinyengine/src/render_reference/src/fileio.cpp"
+},
+{
+  "directory": "/home/jan/code_projects/tinyengine/src/render_reference",
+  "command": "/usr/bin/c++    -O3 -DNDEBUG   -o CMakeFiles/displacement.dir/src/gltools.cpp.o -c /home/jan/code_projects/tinyengine/src/render_reference/src/gltools.cpp",
+  "file": "/home/jan/code_projects/tinyengine/src/render_reference/src/gltools.cpp"
+},
+{
+  "directory": "/home/jan/code_projects/tinyengine/src/render_reference",
+  "command": "/usr/bin/c++    -O3 -DNDEBUG   -o CMakeFiles/displacement.dir/src/ImagePlaneMesh.cpp.o -c /home/jan/code_projects/tinyengine/src/render_reference/src/ImagePlaneMesh.cpp",
+  "file": "/home/jan/code_projects/tinyengine/src/render_reference/src/ImagePlaneMesh.cpp"
+},
+{
+  "directory": "/home/jan/code_projects/tinyengine/src/render_reference",
+  "command": "/usr/bin/c++    -O3 -DNDEBUG   -o CMakeFiles/displacement.dir/src/Matrix4x4.cpp.o -c /home/jan/code_projects/tinyengine/src/render_reference/src/Matrix4x4.cpp",
+  "file": "/home/jan/code_projects/tinyengine/src/render_reference/src/Matrix4x4.cpp"
+},
+{
+  "directory": "/home/jan/code_projects/tinyengine/src/render_reference",
+  "command": "/usr/bin/c++    -O3 -DNDEBUG   -o CMakeFiles/displacement.dir/src/Mesh.cpp.o -c /home/jan/code_projects/tinyengine/src/render_reference/src/Mesh.cpp",
+  "file": "/home/jan/code_projects/tinyengine/src/render_reference/src/Mesh.cpp"
+},
+{
+  "directory": "/home/jan/code_projects/tinyengine/src/render_reference",
+  "command": "/usr/bin/c++    -O3 -DNDEBUG   -o CMakeFiles/bump.dir/src/BumpMapping.cpp.o -c /home/jan/code_projects/tinyengine/src/render_reference/src/BumpMapping.cpp",
+  "file": "/home/jan/code_projects/tinyengine/src/render_reference/src/BumpMapping.cpp"
+},
+{
+  "directory": "/home/jan/code_projects/tinyengine/src/render_reference",
+  "command": "/usr/bin/c++    -O3 -DNDEBUG   -o CMakeFiles/bump.dir/src/Camera.cpp.o -c /home/jan/code_projects/tinyengine/src/render_reference/src/Camera.cpp",
+  "file": "/home/jan/code_projects/tinyengine/src/render_reference/src/Camera.cpp"
+},
+{
+  "directory": "/home/jan/code_projects/tinyengine/src/render_reference",
+  "command": "/usr/bin/c++    -O3 -DNDEBUG   -o CMakeFiles/bump.dir/src/DirectionalLight.cpp.o -c /home/jan/code_projects/tinyengine/src/render_reference/src/DirectionalLight.cpp",
+  "file": "/home/jan/code_projects/tinyengine/src/render_reference/src/DirectionalLight.cpp"
+},
+{
+  "directory": "/home/jan/code_projects/tinyengine/src/render_reference",
+  "command": "/usr/bin/c++    -O3 -DNDEBUG   -o CMakeFiles/bump.dir/src/eventhandling.cpp.o -c /home/jan/code_projects/tinyengine/src/render_reference/src/eventhandling.cpp",
+  "file": "/home/jan/code_projects/tinyengine/src/render_reference/src/eventhandling.cpp"
+},
+{
+  "directory": "/home/jan/code_projects/tinyengine/src/render_reference",
+  "command": "/usr/bin/c++    -O3 -DNDEBUG   -o CMakeFiles/bump.dir/src/fileio.cpp.o -c /home/jan/code_projects/tinyengine/src/render_reference/src/fileio.cpp",
+  "file": "/home/jan/code_projects/tinyengine/src/render_reference/src/fileio.cpp"
+},
+{
+  "directory": "/home/jan/code_projects/tinyengine/src/render_reference",
+  "command": "/usr/bin/c++    -O3 -DNDEBUG   -o CMakeFiles/bump.dir/src/gltools.cpp.o -c /home/jan/code_projects/tinyengine/src/render_reference/src/gltools.cpp",
+  "file": "/home/jan/code_projects/tinyengine/src/render_reference/src/gltools.cpp"
+},
+{
+  "directory": "/home/jan/code_projects/tinyengine/src/render_reference",
+  "command": "/usr/bin/c++    -O3 -DNDEBUG   -o CMakeFiles/bump.dir/src/ImagePlaneMesh.cpp.o -c /home/jan/code_projects/tinyengine/src/render_reference/src/ImagePlaneMesh.cpp",
+  "file": "/home/jan/code_projects/tinyengine/src/render_reference/src/ImagePlaneMesh.cpp"
+},
+{
+  "directory": "/home/jan/code_projects/tinyengine/src/render_reference",
+  "command": "/usr/bin/c++    -O3 -DNDEBUG   -o CMakeFiles/bump.dir/src/Matrix4x4.cpp.o -c /home/jan/code_projects/tinyengine/src/render_reference/src/Matrix4x4.cpp",
+  "file": "/home/jan/code_projects/tinyengine/src/render_reference/src/Matrix4x4.cpp"
+},
+{
+  "directory": "/home/jan/code_projects/tinyengine/src/render_reference",
+  "command": "/usr/bin/c++    -O3 -DNDEBUG   -o CMakeFiles/bump.dir/src/Mesh.cpp.o -c /home/jan/code_projects/tinyengine/src/render_reference/src/Mesh.cpp",
+  "file": "/home/jan/code_projects/tinyengine/src/render_reference/src/Mesh.cpp"
+},
+{
+  "directory": "/home/jan/code_projects/tinyengine/src/render_reference",
+  "command": "/usr/bin/c++    -O3 -DNDEBUG   -o CMakeFiles/npr.dir/src/Npr.cpp.o -c /home/jan/code_projects/tinyengine/src/render_reference/src/Npr.cpp",
+  "file": "/home/jan/code_projects/tinyengine/src/render_reference/src/Npr.cpp"
+},
+{
+  "directory": "/home/jan/code_projects/tinyengine/src/render_reference",
+  "command": "/usr/bin/c++    -O3 -DNDEBUG   -o CMakeFiles/npr.dir/src/Camera.cpp.o -c /home/jan/code_projects/tinyengine/src/render_reference/src/Camera.cpp",
+  "file": "/home/jan/code_projects/tinyengine/src/render_reference/src/Camera.cpp"
+},
+{
+  "directory": "/home/jan/code_projects/tinyengine/src/render_reference",
+  "command": "/usr/bin/c++    -O3 -DNDEBUG   -o CMakeFiles/npr.dir/src/DirectionalLight.cpp.o -c /home/jan/code_projects/tinyengine/src/render_reference/src/DirectionalLight.cpp",
+  "file": "/home/jan/code_projects/tinyengine/src/render_reference/src/DirectionalLight.cpp"
+},
+{
+  "directory": "/home/jan/code_projects/tinyengine/src/render_reference",
+  "command": "/usr/bin/c++    -O3 -DNDEBUG   -o CMakeFiles/npr.dir/src/eventhandling.cpp.o -c /home/jan/code_projects/tinyengine/src/render_reference/src/eventhandling.cpp",
+  "file": "/home/jan/code_projects/tinyengine/src/render_reference/src/eventhandling.cpp"
+},
+{
+  "directory": "/home/jan/code_projects/tinyengine/src/render_reference",
+  "command": "/usr/bin/c++    -O3 -DNDEBUG   -o CMakeFiles/npr.dir/src/fileio.cpp.o -c /home/jan/code_projects/tinyengine/src/render_reference/src/fileio.cpp",
+  "file": "/home/jan/code_projects/tinyengine/src/render_reference/src/fileio.cpp"
+},
+{
+  "directory": "/home/jan/code_projects/tinyengine/src/render_reference",
+  "command": "/usr/bin/c++    -O3 -DNDEBUG   -o CMakeFiles/npr.dir/src/gltools.cpp.o -c /home/jan/code_projects/tinyengine/src/render_reference/src/gltools.cpp",
+  "file": "/home/jan/code_projects/tinyengine/src/render_reference/src/gltools.cpp"
+},
+{
+  "directory": "/home/jan/code_projects/tinyengine/src/render_reference",
+  "command": "/usr/bin/c++    -O3 -DNDEBUG   -o CMakeFiles/npr.dir/src/ImagePlaneMesh.cpp.o -c /home/jan/code_projects/tinyengine/src/render_reference/src/ImagePlaneMesh.cpp",
+  "file": "/home/jan/code_projects/tinyengine/src/render_reference/src/ImagePlaneMesh.cpp"
+},
+{
+  "directory": "/home/jan/code_projects/tinyengine/src/render_reference",
+  "command": "/usr/bin/c++    -O3 -DNDEBUG   -o CMakeFiles/npr.dir/src/Matrix4x4.cpp.o -c /home/jan/code_projects/tinyengine/src/render_reference/src/Matrix4x4.cpp",
+  "file": "/home/jan/code_projects/tinyengine/src/render_reference/src/Matrix4x4.cpp"
+},
+{
+  "directory": "/home/jan/code_projects/tinyengine/src/render_reference",
+  "command": "/usr/bin/c++    -O3 -DNDEBUG   -o CMakeFiles/npr.dir/src/Mesh.cpp.o -c /home/jan/code_projects/tinyengine/src/render_reference/src/Mesh.cpp",
+  "file": "/home/jan/code_projects/tinyengine/src/render_reference/src/Mesh.cpp"
+},
+{
+  "directory": "/home/jan/code_projects/tinyengine/src/render_reference",
+  "command": "/usr/bin/c++    -O3 -DNDEBUG   -o CMakeFiles/shadow.dir/src/ShadowMapping.cpp.o -c /home/jan/code_projects/tinyengine/src/render_reference/src/ShadowMapping.cpp",
+  "file": "/home/jan/code_projects/tinyengine/src/render_reference/src/ShadowMapping.cpp"
+},
+{
+  "directory": "/home/jan/code_projects/tinyengine/src/render_reference",
+  "command": "/usr/bin/c++    -O3 -DNDEBUG   -o CMakeFiles/shadow.dir/src/Camera.cpp.o -c /home/jan/code_projects/tinyengine/src/render_reference/src/Camera.cpp",
+  "file": "/home/jan/code_projects/tinyengine/src/render_reference/src/Camera.cpp"
+},
+{
+  "directory": "/home/jan/code_projects/tinyengine/src/render_reference",
+  "command": "/usr/bin/c++    -O3 -DNDEBUG   -o CMakeFiles/shadow.dir/src/DirectionalLight.cpp.o -c /home/jan/code_projects/tinyengine/src/render_reference/src/DirectionalLight.cpp",
+  "file": "/home/jan/code_projects/tinyengine/src/render_reference/src/DirectionalLight.cpp"
+},
+{
+  "directory": "/home/jan/code_projects/tinyengine/src/render_reference",
+  "command": "/usr/bin/c++    -O3 -DNDEBUG   -o CMakeFiles/shadow.dir/src/eventhandling.cpp.o -c /home/jan/code_projects/tinyengine/src/render_reference/src/eventhandling.cpp",
+  "file": "/home/jan/code_projects/tinyengine/src/render_reference/src/eventhandling.cpp"
+},
+{
+  "directory": "/home/jan/code_projects/tinyengine/src/render_reference",
+  "command": "/usr/bin/c++    -O3 -DNDEBUG   -o CMakeFiles/shadow.dir/src/fileio.cpp.o -c /home/jan/code_projects/tinyengine/src/render_reference/src/fileio.cpp",
+  "file": "/home/jan/code_projects/tinyengine/src/render_reference/src/fileio.cpp"
+},
+{
+  "directory": "/home/jan/code_projects/tinyengine/src/render_reference",
+  "command": "/usr/bin/c++    -O3 -DNDEBUG   -o CMakeFiles/shadow.dir/src/gltools.cpp.o -c /home/jan/code_projects/tinyengine/src/render_reference/src/gltools.cpp",
+  "file": "/home/jan/code_projects/tinyengine/src/render_reference/src/gltools.cpp"
+},
+{
+  "directory": "/home/jan/code_projects/tinyengine/src/render_reference",
+  "command": "/usr/bin/c++    -O3 -DNDEBUG   -o CMakeFiles/shadow.dir/src/ImagePlaneMesh.cpp.o -c /home/jan/code_projects/tinyengine/src/render_reference/src/ImagePlaneMesh.cpp",
+  "file": "/home/jan/code_projects/tinyengine/src/render_reference/src/ImagePlaneMesh.cpp"
+},
+{
+  "directory": "/home/jan/code_projects/tinyengine/src/render_reference",
+  "command": "/usr/bin/c++    -O3 -DNDEBUG   -o CMakeFiles/shadow.dir/src/Matrix4x4.cpp.o -c /home/jan/code_projects/tinyengine/src/render_reference/src/Matrix4x4.cpp",
+  "file": "/home/jan/code_projects/tinyengine/src/render_reference/src/Matrix4x4.cpp"
+},
+{
+  "directory": "/home/jan/code_projects/tinyengine/src/render_reference",
+  "command": "/usr/bin/c++    -O3 -DNDEBUG   -o CMakeFiles/shadow.dir/src/Mesh.cpp.o -c /home/jan/code_projects/tinyengine/src/render_reference/src/Mesh.cpp",
+  "file": "/home/jan/code_projects/tinyengine/src/render_reference/src/Mesh.cpp"
+},
+{
+  "directory": "/home/jan/code_projects/tinyengine/src/render_reference",
+  "command": "/usr/bin/c++    -O3 -DNDEBUG   -o CMakeFiles/phong.dir/src/Phong.cpp.o -c /home/jan/code_projects/tinyengine/src/render_reference/src/Phong.cpp",
+  "file": "/home/jan/code_projects/tinyengine/src/render_reference/src/Phong.cpp"
+},
+{
+  "directory": "/home/jan/code_projects/tinyengine/src/render_reference",
+  "command": "/usr/bin/c++    -O3 -DNDEBUG   -o CMakeFiles/phong.dir/src/Camera.cpp.o -c /home/jan/code_projects/tinyengine/src/render_reference/src/Camera.cpp",
+  "file": "/home/jan/code_projects/tinyengine/src/render_reference/src/Camera.cpp"
+},
+{
+  "directory": "/home/jan/code_projects/tinyengine/src/render_reference",
+  "command": "/usr/bin/c++    -O3 -DNDEBUG   -o CMakeFiles/phong.dir/src/DirectionalLight.cpp.o -c /home/jan/code_projects/tinyengine/src/render_reference/src/DirectionalLight.cpp",
+  "file": "/home/jan/code_projects/tinyengine/src/render_reference/src/DirectionalLight.cpp"
+},
+{
+  "directory": "/home/jan/code_projects/tinyengine/src/render_reference",
+  "command": "/usr/bin/c++    -O3 -DNDEBUG   -o CMakeFiles/phong.dir/src/eventhandling.cpp.o -c /home/jan/code_projects/tinyengine/src/render_reference/src/eventhandling.cpp",
+  "file": "/home/jan/code_projects/tinyengine/src/render_reference/src/eventhandling.cpp"
+},
+{
+  "directory": "/home/jan/code_projects/tinyengine/src/render_reference",
+  "command": "/usr/bin/c++    -O3 -DNDEBUG   -o CMakeFiles/phong.dir/src/fileio.cpp.o -c /home/jan/code_projects/tinyengine/src/render_reference/src/fileio.cpp",
+  "file": "/home/jan/code_projects/tinyengine/src/render_reference/src/fileio.cpp"
+},
+{
+  "directory": "/home/jan/code_projects/tinyengine/src/render_reference",
+  "command": "/usr/bin/c++    -O3 -DNDEBUG   -o CMakeFiles/phong.dir/src/gltools.cpp.o -c /home/jan/code_projects/tinyengine/src/render_reference/src/gltools.cpp",
+  "file": "/home/jan/code_projects/tinyengine/src/render_reference/src/gltools.cpp"
+},
+{
+  "directory": "/home/jan/code_projects/tinyengine/src/render_reference",
+  "command": "/usr/bin/c++    -O3 -DNDEBUG   -o CMakeFiles/phong.dir/src/ImagePlaneMesh.cpp.o -c /home/jan/code_projects/tinyengine/src/render_reference/src/ImagePlaneMesh.cpp",
+  "file": "/home/jan/code_projects/tinyengine/src/render_reference/src/ImagePlaneMesh.cpp"
+},
+{
+  "directory": "/home/jan/code_projects/tinyengine/src/render_reference",
+  "command": "/usr/bin/c++    -O3 -DNDEBUG   -o CMakeFiles/phong.dir/src/Matrix4x4.cpp.o -c /home/jan/code_projects/tinyengine/src/render_reference/src/Matrix4x4.cpp",
+  "file": "/home/jan/code_projects/tinyengine/src/render_reference/src/Matrix4x4.cpp"
+},
+{
+  "directory": "/home/jan/code_projects/tinyengine/src/render_reference",
+  "command": "/usr/bin/c++    -O3 -DNDEBUG   -o CMakeFiles/phong.dir/src/Mesh.cpp.o -c /home/jan/code_projects/tinyengine/src/render_reference/src/Mesh.cpp",
+  "file": "/home/jan/code_projects/tinyengine/src/render_reference/src/Mesh.cpp"
+},
+{
+  "directory": "/home/jan/code_projects/tinyengine/src/render_reference",
+  "command": "/usr/bin/c++    -O3 -DNDEBUG   -o CMakeFiles/combined.dir/src/combined.cpp.o -c /home/jan/code_projects/tinyengine/src/render_reference/src/combined.cpp",
+  "file": "/home/jan/code_projects/tinyengine/src/render_reference/src/combined.cpp"
+},
+{
+  "directory": "/home/jan/code_projects/tinyengine/src/render_reference",
+  "command": "/usr/bin/c++    -O3 -DNDEBUG   -o CMakeFiles/combined.dir/src/Camera.cpp.o -c /home/jan/code_projects/tinyengine/src/render_reference/src/Camera.cpp",
+  "file": "/home/jan/code_projects/tinyengine/src/render_reference/src/Camera.cpp"
+},
+{
+  "directory": "/home/jan/code_projects/tinyengine/src/render_reference",
+  "command": "/usr/bin/c++    -O3 -DNDEBUG   -o CMakeFiles/combined.dir/src/DirectionalLight.cpp.o -c /home/jan/code_projects/tinyengine/src/render_reference/src/DirectionalLight.cpp",
+  "file": "/home/jan/code_projects/tinyengine/src/render_reference/src/DirectionalLight.cpp"
+},
+{
+  "directory": "/home/jan/code_projects/tinyengine/src/render_reference",
+  "command": "/usr/bin/c++    -O3 -DNDEBUG   -o CMakeFiles/combined.dir/src/eventhandling.cpp.o -c /home/jan/code_projects/tinyengine/src/render_reference/src/eventhandling.cpp",
+  "file": "/home/jan/code_projects/tinyengine/src/render_reference/src/eventhandling.cpp"
+},
+{
+  "directory": "/home/jan/code_projects/tinyengine/src/render_reference",
+  "command": "/usr/bin/c++    -O3 -DNDEBUG   -o CMakeFiles/combined.dir/src/fileio.cpp.o -c /home/jan/code_projects/tinyengine/src/render_reference/src/fileio.cpp",
+  "file": "/home/jan/code_projects/tinyengine/src/render_reference/src/fileio.cpp"
+},
+{
+  "directory": "/home/jan/code_projects/tinyengine/src/render_reference",
+  "command": "/usr/bin/c++    -O3 -DNDEBUG   -o CMakeFiles/combined.dir/src/gltools.cpp.o -c /home/jan/code_projects/tinyengine/src/render_reference/src/gltools.cpp",
+  "file": "/home/jan/code_projects/tinyengine/src/render_reference/src/gltools.cpp"
+},
+{
+  "directory": "/home/jan/code_projects/tinyengine/src/render_reference",
+  "command": "/usr/bin/c++    -O3 -DNDEBUG   -o CMakeFiles/combined.dir/src/ImagePlaneMesh.cpp.o -c /home/jan/code_projects/tinyengine/src/render_reference/src/ImagePlaneMesh.cpp",
+  "file": "/home/jan/code_projects/tinyengine/src/render_reference/src/ImagePlaneMesh.cpp"
+},
+{
+  "directory": "/home/jan/code_projects/tinyengine/src/render_reference",
+  "command": "/usr/bin/c++    -O3 -DNDEBUG   -o CMakeFiles/combined.dir/src/Matrix4x4.cpp.o -c /home/jan/code_projects/tinyengine/src/render_reference/src/Matrix4x4.cpp",
+  "file": "/home/jan/code_projects/tinyengine/src/render_reference/src/Matrix4x4.cpp"
+},
+{
+  "directory": "/home/jan/code_projects/tinyengine/src/render_reference",
+  "command": "/usr/bin/c++    -O3 -DNDEBUG   -o CMakeFiles/combined.dir/src/Mesh.cpp.o -c /home/jan/code_projects/tinyengine/src/render_reference/src/Mesh.cpp",
+  "file": "/home/jan/code_projects/tinyengine/src/render_reference/src/Mesh.cpp"
+},
+{
+  "directory": "/home/jan/code_projects/tinyengine/src/render_reference",
+  "command": "/usr/bin/c++    -O3 -DNDEBUG   -o CMakeFiles/simple.dir/src/Simple.cpp.o -c /home/jan/code_projects/tinyengine/src/render_reference/src/Simple.cpp",
+  "file": "/home/jan/code_projects/tinyengine/src/render_reference/src/Simple.cpp"
+},
+{
+  "directory": "/home/jan/code_projects/tinyengine/src/render_reference",
+  "command": "/usr/bin/c++    -O3 -DNDEBUG   -o CMakeFiles/simple.dir/src/Camera.cpp.o -c /home/jan/code_projects/tinyengine/src/render_reference/src/Camera.cpp",
+  "file": "/home/jan/code_projects/tinyengine/src/render_reference/src/Camera.cpp"
+},
+{
+  "directory": "/home/jan/code_projects/tinyengine/src/render_reference",
+  "command": "/usr/bin/c++    -O3 -DNDEBUG   -o CMakeFiles/simple.dir/src/DirectionalLight.cpp.o -c /home/jan/code_projects/tinyengine/src/render_reference/src/DirectionalLight.cpp",
+  "file": "/home/jan/code_projects/tinyengine/src/render_reference/src/DirectionalLight.cpp"
+},
+{
+  "directory": "/home/jan/code_projects/tinyengine/src/render_reference",
+  "command": "/usr/bin/c++    -O3 -DNDEBUG   -o CMakeFiles/simple.dir/src/eventhandling.cpp.o -c /home/jan/code_projects/tinyengine/src/render_reference/src/eventhandling.cpp",
+  "file": "/home/jan/code_projects/tinyengine/src/render_reference/src/eventhandling.cpp"
+},
+{
+  "directory": "/home/jan/code_projects/tinyengine/src/render_reference",
+  "command": "/usr/bin/c++    -O3 -DNDEBUG   -o CMakeFiles/simple.dir/src/fileio.cpp.o -c /home/jan/code_projects/tinyengine/src/render_reference/src/fileio.cpp",
+  "file": "/home/jan/code_projects/tinyengine/src/render_reference/src/fileio.cpp"
+},
+{
+  "directory": "/home/jan/code_projects/tinyengine/src/render_reference",
+  "command": "/usr/bin/c++    -O3 -DNDEBUG   -o CMakeFiles/simple.dir/src/gltools.cpp.o -c /home/jan/code_projects/tinyengine/src/render_reference/src/gltools.cpp",
+  "file": "/home/jan/code_projects/tinyengine/src/render_reference/src/gltools.cpp"
+},
+{
+  "directory": "/home/jan/code_projects/tinyengine/src/render_reference",
+  "command": "/usr/bin/c++    -O3 -DNDEBUG   -o CMakeFiles/simple.dir/src/ImagePlaneMesh.cpp.o -c /home/jan/code_projects/tinyengine/src/render_reference/src/ImagePlaneMesh.cpp",
+  "file": "/home/jan/code_projects/tinyengine/src/render_reference/src/ImagePlaneMesh.cpp"
+},
+{
+  "directory": "/home/jan/code_projects/tinyengine/src/render_reference",
+  "command": "/usr/bin/c++    -O3 -DNDEBUG   -o CMakeFiles/simple.dir/src/Matrix4x4.cpp.o -c /home/jan/code_projects/tinyengine/src/render_reference/src/Matrix4x4.cpp",
+  "file": "/home/jan/code_projects/tinyengine/src/render_reference/src/Matrix4x4.cpp"
+},
+{
+  "directory": "/home/jan/code_projects/tinyengine/src/render_reference",
+  "command": "/usr/bin/c++    -O3 -DNDEBUG   -o CMakeFiles/simple.dir/src/Mesh.cpp.o -c /home/jan/code_projects/tinyengine/src/render_reference/src/Mesh.cpp",
+  "file": "/home/jan/code_projects/tinyengine/src/render_reference/src/Mesh.cpp"
+}
+]

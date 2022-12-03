@@ -1,0 +1,31 @@
+#version 420 core
+
+layout(vertices = 3) out;
+
+in VertexData
+{
+	vec3 Tangent1;
+	vec3 Tangent2;
+	vec3 Normal;
+	vec2 TexCoords;
+} inData[];
+
+out VertexData
+{
+	vec3 Tangent1;
+	vec3 Tangent2;
+	vec3 Normal;
+	vec2 TexCoords;
+} outData[];
+
+void main(void)
+{
+	outData[gl_InvocationID].Tangent1 = inData[gl_InvocationID].Tangent1;
+	outData[gl_InvocationID].Tangent2 = inData[gl_InvocationID].Tangent2;
+	outData[gl_InvocationID].Normal = inData[gl_InvocationID].Normal;
+	outData[gl_InvocationID].TexCoords = inData[gl_InvocationID].TexCoords;
+	gl_out[gl_InvocationID].gl_Position = gl_in[gl_InvocationID].gl_Position;
+	gl_TessLevelOuter[gl_InvocationID] = 64;
+	if(gl_InvocationID == 0)
+		gl_TessLevelInner[0] = 64;
+}
