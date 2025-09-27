@@ -1,14 +1,16 @@
 
 How to compile?
-g++ ../src/main.cpp ../src/renderer.cpp ../src/transform.cpp ../src/Utils.cpp ../src/gamenode.cpp ../src/teogl/mesh.cpp ../src/teogl/openGLrenderer.cpp -o ../build/tinyEngine -lglut -lGLU -lGL -lGLEW -lm
+g++ ../src/main.cpp ../renderer.cpp ../src/transform.cpp ../src/Utils.cpp ../src/gamenode.cpp ../src/teogl/mesh.cpp ../src/teogl/openGLrenderer.cpp -o ../build/tinyEngine -lglut -lGLU -lGL -lGLEW -lm
 
 
 
 TODO:
 
-* Add repo to github.
-    * can do it privately first
-    * should do it for safety
+Think about whether I want to make this really small and 2D to start with.
+
+Provide required libraries, opengl, glew or sdl
+
+
 
 * Let Mesh be owned by the renderer, but give it a base class in the engine.
 
